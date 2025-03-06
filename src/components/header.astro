@@ -1,0 +1,24 @@
+---
+import "../global.css";
+import icon_whatsapp from "../assets/svg/whatsapp.svg";
+import icon_phone from "../assets/svg/phone.svg";
+import icon_mail from "../assets/svg/mail.svg";
+import logo from "../assets/img/logo-header.png";
+---
+
+<!-- header en tailwind -->
+<header class="bg-blue-950 p-7 flex items-center justify-between">
+  <img src={logo.src} alt="logo" class="w-32" />
+
+  <!-- <div class="space-x-8">
+    <a href="/">Inicio</a>
+    <a href="/nosotros">Nosotros</a>
+    <a href="/servicios">Servicios</a>
+  </div> -->
+
+  <div class="flex space-x-10">
+    <img src={icon_whatsapp.src} alt="whatsapp" class="w-6 h-6 mr-2" />
+    <img src={icon_phone.src} alt="phone" class="w-6 h-6 mr-2" />
+    <img src={icon_mail.src} alt="mail" class="w-6 h-6 mr-2" />
+  </div>
+</header>
