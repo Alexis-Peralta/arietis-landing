@@ -1,1 +1,16 @@
 @import "tailwindcss";
+
+
+@theme {
+    --color-arietis-50: #f3faf3;
+    --color-arietis-100: #e2f6e2;
+    --color-arietis-200: #c7ebc8;
+    --color-arietis-300: #9bda9d;
+    --color-arietis-400: #67c16b;
+    --color-arietis-500: #409f44;
+    --color-arietis-600: #328735;
+    --color-arietis-700: #2a6b2d;
+    --color-arietis-800: #265529;
+    --color-arietis-900: #204723;
+    --color-arietis-950: #0d260f;
+}

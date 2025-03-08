@@ -1,8 +1,22 @@
 ---
 import "../global.css";
-import fondo_home from "../assets/img/fondo.webp";
+import fondo_home from "../assets/img/fondo-home.webp";
 ---
 
-<div class="w-full h-svh flex items-center justify-center">
-    <img src={fondo_home.src} alt="fondo" class="w-full h-screen object-cover" />
+<div class="w-full h-svh flex items-center justify-center relative">
+  <div
+    class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-arietis-500 p-5 md:p-8 z-10"
+  >
+    <h1 class="text-white text-3xl md:text-5xl font-bold">
+      Asesoría Confiable para el Éxito de tu Negocio
+    </h1>
+    <p class="text-white text-lg md:text-2xl">
+      Soluciones estratégicas con seguridad y confianza
+    </p>
+  </div>
+  <img
+    src={fondo_home.src}
+    alt="fondo"
+    class="w-full h-full object-cover brightness-50"
+  />
 </div>
