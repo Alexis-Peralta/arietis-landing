@@ -1,0 +1,78 @@
+---
+import "../global.css";
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/header.astro";
+import Footer from "../components/footer.astro";
+import fondo_home from "../assets/img/fondo-home.webp";
+---
+
+<Layout>
+  <Header />
+  <main class="w-full h-full flex flex-col items-center justify-center">
+    <section class="flex flex-col md:flex-row items-center m-8 md:m-16">
+      <img
+        src={fondo_home.src}
+        alt="fondo"
+        class="w-full md:w-1/2 object-cover brightness-50 rounded-none md:rounded-md shadow-lg"
+      />
+      <div
+        class="w-full md:w-1/2 flex flex-col space-y-5 p-5 bg-arietis-600 rounded-none md:rounded-r-lg shadow-lg"
+      >
+        <h1 class="text-white text-4xl font-bold text-center md:text-start">
+          SOLUCIONES
+        </h1>
+        <p class="text-white text-lg font-medium">
+          Ofrecemos una amplia gama de soluciones diseñados para atender a
+          empresas de cualquier tamaño, sector o volumen de operaciones. Nuestro
+          objetivo es garantizar que su empresa cumpla con todas sus
+          obligaciones contables, fiscales y laborales, esenciales para su
+          correcto funcionamiento. Ya sea que se trate de una persona física o
+          moral, nos aseguramos de brindar un servicio personalizado y adaptado
+          a sus necesidades específicas.
+        </p>
+      </div>
+    </section>
+
+    <!-- <section class="flex flex-col md:flex-row items-center bg-arietis-400">
+      <div class="w-full md:w-1/2 flex flex-col space-y-5">
+        <h2 class="text-white text-3xl font-bold text-center md:text-start">
+          Más Información
+        </h2>
+        <details class="bg-white p-4 rounded-md shadow-md">
+          <summary
+            class="font-semibold text-arietis-500 text-lg cursor-pointer"
+          >
+            Contables
+          </summary>
+          <ul>
+            <li>
+              Integración bancaria automatizada para una contabilización
+              eficiente.
+            </li>
+            <li>
+              Gestión completa de facturas (ingresos y egresos) en formatos PDF
+              y XML.
+            </li>
+            <li>Captura y control de pólizas de ingresos, egresos y diario.</li>
+            <li>
+              Estados financieros mensuales y anuales, precisos y detallados.
+            </li>
+            <li>
+              Desarrollo e implementación de sistemas contables personalizados.
+            </li>
+            <li>Regulación contable para cumplir con normativas vigentes.</li>
+            <li>
+              Auditoríasfinancieras para garantizar transparencia y control.
+            </li>
+          </ul>
+        </details>
+      </div>
+      <img
+        src={fondo_home.src}
+        alt="fondo"
+        class="w-full md:w-1/2 object-cover brightness-50 rounded-none md:rounded-md shadow-lg"
+      />
+    </section> -->
+  </main>
+  <Footer />
+</Layout>

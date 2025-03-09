@@ -4,35 +4,66 @@ import icon_whatsapp from "../assets/svg/whatsapp.svg";
 import icon_phone from "../assets/svg/phone.svg";
 import icon_mail from "../assets/svg/mail.svg";
 import logo from "../assets/img/logo-arietis.png";
+import menu from "../assets/svg/menu.svg";
+import close from "../assets/svg/close.svg";
 ---
 
-<header class="bg-white p-5 flex flex-col md:flex-row items-center justify-between">
-  <img src={logo.src} alt="logo" class="w-64" />
+<header
+  class="bg-white p-4 md:p-5 flex flex-col md:flex-row items-center justify-between shadow-md"
+>
+  <img src={logo.src} alt="logo" class="w-80 md:w-64" />
 
-  <div class="space-x-8">
+  <div class="space-x-8 hidden md:block">
     <a
-      class="font-semibold text-arietis-500 text-lg hover:text-arietis-950 hover:text-xl"
+      class="font-semibold text-arietis-500 text-lg hover:text-arietis-700 hover:text-xl"
       href="/">Inicio</a
     >
     <a
-      class="font-semibold text-arietis-500 text-lg hover:text-arietis-950 hover:text-xl"
+      class="font-semibold text-arietis-500 text-lg hover:text-arietis-700 hover:text-xl"
       href="/servicios">Servicios</a
     >
     <a
-      class="font-semibold text-arietis-500 text-lg hover:text-arietis-950 hover:text-xl"
+      class="font-semibold text-arietis-500 text-lg hover:text-arietis-700 hover:text-xl"
       href="/nosotros">Nosotros</a
     >
   </div>
 
-  <div class="flex space-x-5">
+  <div class="flex space-x-16 md:space-x-8 mt-4 md:mt-0">
     <a href="tel:+525573759193">
-      <img src={icon_phone.src} alt="phone" class="w-6" />
+      <img src={icon_phone.src} alt="phone" class="w-8 md:w-7" />
     </a>
     <a href="https://wa.me/5561907698" target="_blank" rel="noreferrer">
-      <img src={icon_whatsapp.src} alt="whatsapp" class="w-6" />
+      <img src={icon_whatsapp.src} alt="whatsapp" class="w-8 md:w-7" />
     </a>
     <a href="mailto:emgconsultores9@gmail.com">
-      <img src={icon_mail.src} alt="mail" class="w-6" />
+      <img src={icon_mail.src} alt="mail" class="w-8 md:w-7" />
     </a>
+    <button class="md:hidden" id="menu-button">
+      <img src={menu.src} alt="menu" class="w-8 md:w-7" />
+    </button>
+  </div>
+
+  <div class="space-x-8 md:hidden mobile-menu" id="mobile-menu">
+    <a
+      class="font-semibold text-arietis-500 text-lg hover:text-arietis-700 hover:text-xl"
+      href="/">Inicio</a
+    >
+    <a
+      class="font-semibold text-arietis-500 text-lg hover:text-arietis-700 hover:text-xl"
+      href="/servicios">Servicios</a
+    >
+    <a
+      class="font-semibold text-arietis-500 text-lg hover:text-arietis-700 hover:text-xl"
+      href="/nosotros">Nosotros</a
+    >
   </div>
 </header>
+
+<script>
+  const menuButton = document.getElementById("menu-button");
+  const mobileMenu = document.getElementById("mobile-menu");
+
+  menuButton.addEventListener("click", () => {
+    mobileMenu.classList.toggle("open");
+  });
+</script>
